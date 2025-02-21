@@ -14,7 +14,7 @@
 
 // Memory mapped I/O for keys
 #define KEY_BASE 0xFF200050
-volatile int* KEYS_ptr = reinterpret_cast<volatile int*>(KEY_BASE);
+volatile int * KEYS_ptr = (int *) KEY_BASE;
 int keys;
 
 // Global game variables
