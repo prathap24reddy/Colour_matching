@@ -290,8 +290,6 @@ void fin_page(int ok) {
 
 // Main entry point
 int main() {
-    // Optionally seed the random number generator
-    std::srand(static_cast<unsigned>(std::time(nullptr)));
     
     clear_screen_notchar();
     main_page();
