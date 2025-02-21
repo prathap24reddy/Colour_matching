@@ -33,13 +33,13 @@ void do_nothing(int delayVal) {
 
 // Write a pixel to the VGA display
 void write_pixel(int x, int y, short colour) {
-    volatile short* vga_addr = reinterpret_cast<volatile short*>(0x08000000 + (y << 10) + (x << 1));
+    volatile short *vga_addr = (volatile short *)(0x08000000 + (y << 10) + (x << 1));
     *vga_addr = colour;
 }
 
 // Write a character to the character buffer
 void write_char(int x, int y, char c) {
-    volatile char* character_buffer = reinterpret_cast<volatile char*>(0x09000000 + (y << 7) + x);
+    vvolatile char *character_buffer = (char *)(0x09000000 + (y << 7) + x);
     *character_buffer = c;
 }
 
