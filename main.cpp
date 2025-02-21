@@ -39,7 +39,7 @@ void write_pixel(int x, int y, short colour) {
 
 // Write a character to the character buffer
 void write_char(int x, int y, char c) {
-    vvolatile char *character_buffer = (char *)(0x09000000 + (y << 7) + x);
+    volatile char *character_buffer = (char *)(0x09000000 + (y << 7) + x);
     *character_buffer = c;
 }
 
